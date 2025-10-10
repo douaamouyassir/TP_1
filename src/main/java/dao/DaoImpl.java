@@ -1,8 +1,13 @@
 package dao;
 
-public class DaoImpl implements IDao{
+import org.springframework.stereotype.Component;
+
+@Component("d") // Nom du bean
+public class DaoImpl implements IDao {
     @Override
     public double getData() {
-        return 5.0;
+        System.out.println("Version Base de données");
+        double temp = 23;
+        return temp;
     }
 }
